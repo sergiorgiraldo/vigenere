@@ -1,52 +1,120 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import { useRef, useState, useEffect } from "react";
+import { Cipher, Decipher } from "../lib/index";
 
 export default function Home() {
+	const keyInputRef = useRef();
+	const textInputRef = useRef();
+	const resultInputRef = useRef();
+	const [result, setResult] = useState("");
+	const [key, setKey] = useState("");
+
+	useEffect(() => {
+		if (keyInputRef.current) {
+			keyInputRef.current.focus();
+		}
+	  }, []);
+
+	const handleChange = (event) => {
+	  const result = event.target.value.replace(/[^a-z]/gi, '');
+  
+	  setKey(result);
+	};
+
+	const handleSubmit= (event, param) => {
+		event.preventDefault();
+
+		const key = keyInputRef.current.value;
+		const txt = textInputRef.current.value;
+
+		if (param == "e") {
+			setResult(Cipher(key, txt));
+		} else {
+			setResult(Decipher(key, txt));
+		}
+	}
+
 	return (
-		<div className={styles.container}>
-			<Head>
-				<title>Create Next App</title>
-				<meta
-					name="description"
-					content="VIGENERE CIPHER"
-				/>
-				<link rel="icon" href="/favicon.ico" />
-			</Head>
+		<form>
+			<div className={styles.container}>
+				<Head>
+					<title>Vigenere Cipher</title>
+					<meta name="description" content="VIGENERE CIPHER" />
+					<link rel="icon" href="/favicon.ico" />
+				</Head>
 
-			<main className={styles.main}>
-				<h1 className={styles.title}>
-					Vigenere Cipher
-				</h1>
+				<main className={styles.main}>
+					<h1 className={styles.title}>Vigenere Cipher</h1>
 
-				<p className={styles.description}>
-					Lets keep you messages safer with &nbsp;
-					<code className={styles.code}><a href="https://www.geeksforgeeks.org/vigenere-cipher/">encryption</a></code>
-				</p>
-				<p>
-					<span className={styles.normalText}>key</span>
-					&nbsp; 
-					<input type="text" name="secret-key" id="secret-key" maxLength={100} size="50" />
-				</p>
-				<div className={styles.grid}>
-					<textarea name="original" id="original" cols="70" rows="10"></textarea>
-					<br/>
-					<p className={styles.card}>
-						<button className={styles.button}>Encrypt</button>
-						<button className={styles.button}>Decrypt</button>
+					<p className={styles.description}>
+						Lets keep you messages safer with &nbsp;
+						<code className={styles.code}>
+							<a href="https://www.geeksforgeeks.org/vigenere-cipher/">
+								encryption
+							</a>
+						</code>
 					</p>
-					<textarea name="original" id="original" cols="70" rows="10"></textarea>
-				</div>
-			</main>
+					<p>
+						<span className={styles.normalText}>key</span>
+						&nbsp;
+						<input
+							type="text"
+							name="secret-key"
+							id="secret-key"
+							autoFocus
+							maxLength={100}
+							size="40"
+							ref={keyInputRef}
+							className={styles.inputs}
+							onChange={handleChange}
+							value={key}
+						/>
+					</p>
+					<div className={styles.grid}>
+						<textarea
+							name="original"
+							id="original"
+							cols="70"
+							rows="7"
+							ref={textInputRef}
+							className={styles.inputs}></textarea>
+						<br />
+						<p className={styles.card}>
+							<button
+								className={styles.button}
+								onClick={(event) => handleSubmit(event, "e")}>
+								Encrypt
+							</button>
+							<button
+								className={styles.button}
+								onClick={(event) => handleSubmit(event, "d")}>
+								Decrypt
+							</button>
+						</p>
+						<textarea
+							name="result"
+							id="result"
+							cols="70"
+							rows="7"
+							key={resultInputRef}
+							className={styles.inputs}
+							value={result}
+							readOnly>
+						</textarea>
+					</div>
+				</main>
 
-			<footer className={styles.footer}>
-				<a
-					href="https://https://github.com/sergiorgiraldo"
-					target="_blank"
-					rel="noopener noreferrer">
-					Powered by sergiorgiraldo :-)
-				</a>
-				&copy; 2022
-			</footer>
-		</div>
+				<footer className={styles.footer}>
+					<a
+						href="https://https://github.com/sergiorgiraldo"
+						target="_blank"
+						rel="noopener noreferrer">
+						Powered by sergiorgiraldo :-)
+					</a>
+					&copy; 2022
+				</footer>
+			</div>
+		</form>
 	);
 }
