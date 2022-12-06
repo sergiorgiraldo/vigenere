@@ -2,7 +2,7 @@
 2.0.0 / 2022-12-06
 ==================
 
-- Front-end
+- front end, v 2.0.0:: by sergio giraldo @ 20221206T1603CET, gpg signed
 
 # 1.0.0 / 2022-12-06
 
