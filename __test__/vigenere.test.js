@@ -29,6 +29,9 @@ describe("vigenere encryption", ()=>{
      it( "maria<space>1<space>j1ose",  ()=> {
         expect(Cipher("bola", "maria 1 j1ose")).toBe("nocib 1 x1zsf");
      });
+     it( "mjmfib maria",  ()=> {
+        expect(Cipher("mjmfib", "maria")).toBe("yjdni");
+     });
 });
 
 describe("vigenere decryption", ()=>{
@@ -58,5 +61,8 @@ describe("vigenere decryption", ()=>{
      });
      it( "maria<space>1<space>j1ose",  ()=> {
         expect(Decipher("bola", "nocib 1 x1zsf")).toBe("maria 1 j1ose");
+     });
+     it( "mjmfib maria",  ()=> {
+        expect(Decipher("mjmfib", "yjdni")).toBe("maria");
      });
 });
