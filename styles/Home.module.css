@@ -3,7 +3,6 @@
 }
 
 .main {
-	min-height: 100vh;
 	padding: 4rem 0;
 	flex: 1;
 	display: flex;
@@ -29,7 +28,7 @@
 }
 
 .footer a:hover {
-	text-decoration:underline;
+	text-decoration: underline;
 }
 
 .title a {
@@ -69,12 +68,18 @@
 		DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.inputs {
+	font-size: 1rem;
+	font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
+		DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
 .button {
 	margin-right: 1em;
 	font-size: 1.1rem;
 	font-family: Menlo, Monaco, Lucida Console, Liberation Mono,
 		DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace;
-	cursor: pointer;	
+	cursor: pointer;
 }
 
 .normalText {
@@ -90,7 +95,6 @@
 	flex-wrap: wrap;
 	max-width: 500px;
 }
-
 
 .blk {
 	margin: 1rem;
@@ -111,8 +115,6 @@
 	transition: color 0.15s ease, border-color 0.15s ease;
 	max-width: 400px;
 }
-
-
 
 .card:hover,
 .card:focus,

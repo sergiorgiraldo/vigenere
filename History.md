@@ -1,6 +1,11 @@
-1.0.0 / 2022-12-06
+
+2.0.0 / 2022-12-06
 ==================
 
-  * more unit tests:: by sergio giraldo @ 20221206T1441CET, gpg signed
-  * vigenere algorithm and unit tests for it:: by sergio giraldo @ 20221206T1400CET, gpg signed
-  * html elements:: by sergio giraldo @ 20221205T1627CET, gpg signed
+- Front-end
+
+# 1.0.0 / 2022-12-06
+
+-   more unit tests:: by sergio giraldo @ 20221206T1441CET, gpg signed
+-   vigenere algorithm and unit tests for it:: by sergio giraldo @ 20221206T1400CET, gpg signed
+-   html elements:: by sergio giraldo @ 20221205T1627CET, gpg signed
