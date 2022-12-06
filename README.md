@@ -4,7 +4,7 @@ https://www.geeksforgeeks.org/vigenere-cipher/
 
 ## User stories
 
-1. [ ] User can see the app window with these components:
+1. [x] User can see the app window with these components:
     - Plain text message input field
     - Encryption key input field
     - Action buttons - 'Encrypt' and 'Decrypt'
