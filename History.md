@@ -1,13 +1,10 @@
+# 2.0.1 / 2022-12-07
 
-2.0.1 / 2022-12-07
-==================
+-   [BUG FIX]handling characters not A-Z:: by sergio giraldo @ 20221207T1040CET, gpg signed
 
-  * [BUG FIX]handling characters not A-Z:: by sergio giraldo @ 20221207T1040CET, gpg signed
+# 2.0.0 / 2022-12-06
 
-2.0.0 / 2022-12-06
-==================
-
-- front end, v 2.0.0:: by sergio giraldo @ 20221206T1603CET, gpg signed
+-   front end, v 2.0.0:: by sergio giraldo @ 20221206T1603CET, gpg signed
 
 # 1.0.0 / 2022-12-06
 
