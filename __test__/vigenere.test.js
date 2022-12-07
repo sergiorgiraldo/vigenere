@@ -32,6 +32,9 @@ describe("vigenere encryption", () => {
 	it("mjmfib maria", () => {
 		expect(Cipher("mjmfib", "maria")).toBe("yjdni");
 	});
+	it("bola maria.", () => {
+		expect(Cipher("bola", "maria.")).toBe("nocib.");
+	});	
 });
 
 describe("vigenere decryption", () => {
@@ -65,4 +68,7 @@ describe("vigenere decryption", () => {
 	it("mjmfib maria", () => {
 		expect(Decipher("mjmfib", "yjdni")).toBe("maria");
 	});
+	it("bola nocib.", () => {
+		expect(Decipher("bola", "nocib.")).toBe("maria.");
+	});	
 });

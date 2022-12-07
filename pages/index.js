@@ -14,12 +14,12 @@ export default function Home() {
 		if (keyInputRef.current) {
 			keyInputRef.current.focus();
 		}
-	  }, []);
+	}, []);
 
 	const handleChange = (event) => {
-	  const result = event.target.value.replace(/[^a-z]/gi, '');
-  
-	  setKey(result);
+		let result = event.target.value.replace(/[^a-z]/gi, "");
+		result = result.toUpperCase();
+		setKey(result);
 	};
 
 	const handleSubmit= (event, param) => {

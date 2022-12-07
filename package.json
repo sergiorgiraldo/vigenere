@@ -3,11 +3,11 @@
 	"version": "0.1.0",
 	"private": true,
 	"scripts": {
-		"dev": "next dev",
+		"dev": "vitest run && next dev",
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"test": "vitest"
+		"test": "vitest run --reporter verbose"
 	},
 	"dependencies": {
 		"eslint": "8.29.0",

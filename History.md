@@ -1,4 +1,9 @@
 
+2.0.1 / 2022-12-07
+==================
+
+  * [BUG FIX]handling characters not A-Z:: by sergio giraldo @ 20221207T1040CET, gpg signed
+
 2.0.0 / 2022-12-06
 ==================
 
