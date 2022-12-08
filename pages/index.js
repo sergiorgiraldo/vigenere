@@ -22,7 +22,7 @@ export default function Home() {
 		setKey(result);
 	};
 
-	const handleSubmit= (event, param) => {
+	const handleSubmit = (event, param) => {
 		event.preventDefault();
 
 		const key = keyInputRef.current.value;
@@ -33,7 +33,7 @@ export default function Home() {
 		} else {
 			setResult(Decipher(key, txt));
 		}
-	}
+	};
 
 	return (
 		<form>
@@ -100,8 +100,7 @@ export default function Home() {
 							key={resultInputRef}
 							className={styles.inputs}
 							value={result}
-							readOnly>
-						</textarea>
+							readOnly></textarea>
 					</div>
 				</main>
 

@@ -34,7 +34,7 @@ describe("vigenere encryption", () => {
 	});
 	it("bola maria.", () => {
 		expect(Cipher("bola", "maria.")).toBe("nocib.");
-	});	
+	});
 });
 
 describe("vigenere decryption", () => {
@@ -70,5 +70,5 @@ describe("vigenere decryption", () => {
 	});
 	it("bola nocib.", () => {
 		expect(Decipher("bola", "nocib.")).toBe("maria.");
-	});	
+	});
 });
