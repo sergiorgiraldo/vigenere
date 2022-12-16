@@ -2,6 +2,11 @@
 
 https://www.geeksforgeeks.org/vigenere-cipher/
 
+## Deploy
+
+hosted at AWS S3: http://gha-custom-action-hosting-sergiorgiraldo3.s3-website.eu-west-3.amazonaws.com/
+using Github action as CD tool
+
 ## User stories
 
 1. [x] User can see the app window with these components:
