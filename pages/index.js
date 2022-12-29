@@ -6,7 +6,6 @@ import { Cipher, Decipher } from "../lib/index";
 export default function Home() {
 	const keyInputRef = useRef();
 	const textInputRef = useRef();
-	const resultInputRef = useRef();
 	const [result, setResult] = useState("");
 	const [key, setKey] = useState("");
 
@@ -17,9 +16,9 @@ export default function Home() {
 	}, []);
 
 	const handleChange = (event) => {
-		let result = event.target.value.replace(/[^a-z]/gi, "");
-		result = result.toUpperCase();
-		setKey(result);
+		let text = event.target.value.replace(/[^a-z]/gi, "");
+		text = text.toUpperCase();
+		setKey(text);
 	};
 
 	const handleSubmit = (event, param) => {
@@ -97,8 +96,7 @@ export default function Home() {
 							id="result"
 							cols="70"
 							rows="7"
-							key={resultInputRef}
-							className={styles.inputs}
+							className={[styles.inputs, styles.textarea].join(' ')}
 							value={result}
 							readOnly></textarea>
 					</div>
@@ -106,7 +104,7 @@ export default function Home() {
 
 				<footer className={styles.footer}>
 					<a
-						href="https://https://github.com/sergiorgiraldo"
+						href="https://github.com/sergiorgiraldo"
 						target="_blank"
 						rel="noopener noreferrer">
 						Powered by sergiorgiraldo :-)
