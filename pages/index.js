@@ -1,7 +1,7 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import { useRef, useState, useEffect } from "react";
-import { Cipher, Decipher } from "../lib/index";
+import { Handle } from "../lib/index";
 
 export default function Home() {
 	const keyInputRef = useRef();
@@ -27,11 +27,7 @@ export default function Home() {
 		const key = keyInputRef.current.value;
 		const txt = textInputRef.current.value;
 
-		if (param == "e") {
-			setResult(Cipher(key, txt));
-		} else {
-			setResult(Decipher(key, txt));
-		}
+		setResult(Handle(param, key, txt));
 	};
 
 	return (
@@ -82,12 +78,12 @@ export default function Home() {
 						<p className={styles.card}>
 							<button
 								className={styles.button}
-								onClick={(event) => handleSubmit(event, "e")}>
+								onClick={(event) => handleSubmit(event, "Cipher")}>
 								Encrypt
 							</button>
 							<button
 								className={styles.button}
-								onClick={(event) => handleSubmit(event, "d")}>
+								onClick={(event) => handleSubmit(event, "Decipher")}>
 								Decrypt
 							</button>
 						</p>
