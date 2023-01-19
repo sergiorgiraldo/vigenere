@@ -15,6 +15,15 @@ export default function Home() {
 		}
 	}, []);
 
+	const swapTexts = (event) => {
+		event.preventDefault();
+
+		let original = document.getElementById("original");
+		let result = document.getElementById("result");
+		
+		[original.value, result.value] = [result.value, original.value];
+	};
+
 	const handleChange = (event) => {
 		let text = event.target.value.replace(/[^a-z]/gi, "");
 		text = text.toUpperCase();
@@ -77,14 +86,25 @@ export default function Home() {
 						<br />
 						<p className={styles.card}>
 							<button
+								accessKey="e"
+								title="encrypt - access key e"
 								className={styles.button}
 								onClick={(event) => handleSubmit(event, "Cipher")}>
 								Encrypt
 							</button>
 							<button
+								accessKey="d"
+								title="decrypt - access key d"
 								className={styles.button}
 								onClick={(event) => handleSubmit(event, "Decipher")}>
 								Decrypt
+							</button>
+							<button
+								accessKey="s"
+								title="Swap texts - access key S"
+								className={styles.button}
+								onClick={(event) => swapTexts(event)}>
+								&nbsp;⇄&nbsp;
 							</button>
 						</p>
 						<textarea
