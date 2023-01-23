@@ -86,6 +86,7 @@ export default function Home() {
 						<br />
 						<p className={styles.card}>
 							<button
+								id="btnEncrypt"
 								accessKey="e"
 								title="encrypt - access key e"
 								className={styles.button}
@@ -93,6 +94,7 @@ export default function Home() {
 								Encrypt
 							</button>
 							<button
+								id="btnDecrypt"
 								accessKey="d"
 								title="decrypt - access key d"
 								className={styles.button}
