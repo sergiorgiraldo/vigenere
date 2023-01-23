@@ -1,4 +1,8 @@
 
+# 3.0.1 / 2023-01-19
+
+-   accesskey in buttons;swap texts feature:: by sergio giraldo @ 20230119T1611CET, gpg signed
+
 # 3.0.0 / 2022-12-08
 
 -   deploy to S3:: by sergio giraldo @ 20221208T0929CET, gpg signed
