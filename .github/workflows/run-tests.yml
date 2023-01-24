@@ -1,26 +1,26 @@
 name: Run Tests
 on:
-  push:
-    branches:
-      - develop
+    push:
+        branches:
+            - develop
 jobs:
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Get code
-        uses: actions/checkout@v3
-      - name: Load & cache dependencies
-        uses: ./.github/actions/cached-deps
-        with:
-          caching: 'true'
-      - name: Test code
-        id: run-tests
-        run: npm run test
-      - name: Test UI w/ Cypress
-        uses: cypress-io/github-action@v5
-        with:
-          project: .
-          browser: chrome
-          build: npm run build
-          start: npm run start
-          wait-on: "http://localhost:3000"
+    test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get code
+              uses: actions/checkout@v3
+            - name: Load & cache dependencies
+              uses: ./.github/actions/cached-deps
+              with:
+                  caching: "true"
+            - name: Test code
+              id: run-tests
+              run: npm run test
+            - name: Test UI w/ Cypress
+              uses: cypress-io/github-action@v5
+              with:
+                  project: .
+                  browser: chrome
+                  build: npm run build
+                  start: npm run start
+                  wait-on: "http://localhost:3000"

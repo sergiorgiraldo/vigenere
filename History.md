@@ -1,7 +1,7 @@
-
 # 3.0.2 / 2023-01-23
 
 -   cypress testing:: by sergio giraldo @ 20230123T1645CET, gpg signed
+
 # 3.0.1 / 2023-01-19
 
 -   accesskey in buttons;swap texts feature:: by sergio giraldo @ 20230119T1611CET, gpg signed

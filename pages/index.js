@@ -20,7 +20,7 @@ export default function Home() {
 
 		let original = document.getElementById("original");
 		let result = document.getElementById("result");
-		
+
 		[original.value, result.value] = [result.value, ""];
 	};
 
@@ -90,7 +90,9 @@ export default function Home() {
 								accessKey="e"
 								title="encrypt - access key e"
 								className={styles.button}
-								onClick={(event) => handleSubmit(event, "Cipher")}>
+								onClick={(event) =>
+									handleSubmit(event, "Cipher")
+								}>
 								Encrypt
 							</button>
 							<button
@@ -98,10 +100,13 @@ export default function Home() {
 								accessKey="d"
 								title="decrypt - access key d"
 								className={styles.button}
-								onClick={(event) => handleSubmit(event, "Decipher")}>
+								onClick={(event) =>
+									handleSubmit(event, "Decipher")
+								}>
 								Decrypt
 							</button>
 							<button
+								id="btnSwap"
 								accessKey="s"
 								title="Swap texts - access key S"
 								className={styles.button}
@@ -114,7 +119,9 @@ export default function Home() {
 							id="result"
 							cols="70"
 							rows="7"
-							className={[styles.inputs, styles.textarea].join(' ')}
+							className={[styles.inputs, styles.textarea].join(
+								" "
+							)}
 							value={result}
 							readOnly></textarea>
 					</div>
