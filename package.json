@@ -7,8 +7,8 @@
 		"build": "next build && next export",
 		"start": "next start",
 		"lint": "next lint",
-		"test": "vitest run --reporter verbose && npm run dev & npx cypress run",
-		"cypress:open": "npx cypress open"
+		"test": "vitest run --reporter verbose",
+		"cypress": "npx cypress run"
 	},
 	"dependencies": {
 		"eslint": "8.29.0",

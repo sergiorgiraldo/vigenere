@@ -16,3 +16,11 @@ jobs:
       - name: Test code
         id: run-tests
         run: npm run test
+      - name: Cypress run
+        uses: cypress-io/github-action@v3
+        with:
+          project: ./cypress/e2e
+          browser: chrome
+          build: yarn build
+          start: yarn start
+          wait-on: "http://localhost:3000"
