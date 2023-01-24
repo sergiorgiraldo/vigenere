@@ -21,7 +21,7 @@ export default function Home() {
 		let original = document.getElementById("original");
 		let result = document.getElementById("result");
 		
-		[original.value, result.value] = [result.value, original.value];
+		[original.value, result.value] = [result.value, ""];
 	};
 
 	const handleChange = (event) => {
