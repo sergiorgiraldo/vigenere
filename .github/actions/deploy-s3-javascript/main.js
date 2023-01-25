@@ -7,7 +7,7 @@ const github = require("@actions/github");
 const exec = require("@actions/exec");
 
 function run() {
-	core.notice("Hello from my custom action");
+	core.notice("Deploying to S3 using deploy-s3-javascript custom action");
 
 	const bucket = core.getInput("bucket", { required: true });
 	const bucketRegion = core.getInput("bucket-region", { required: true });
