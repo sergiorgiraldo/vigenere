@@ -119,9 +119,7 @@ export default function Home() {
 							id="result"
 							cols="70"
 							rows="7"
-							className={[styles.inputs, styles.textarea].join(
-								" "
-							)}
+							className={[styles.inputs, styles.textarea].join(" ")}
 							value={result}>
 							</textarea>
 					</div>
