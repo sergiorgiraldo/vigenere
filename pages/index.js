@@ -122,8 +122,8 @@ export default function Home() {
 							className={[styles.inputs, styles.textarea].join(
 								" "
 							)}
-							value={result}
-							readOnly></textarea>
+							value={result}>
+							</textarea>
 					</div>
 				</main>
 
