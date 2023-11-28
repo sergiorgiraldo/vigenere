@@ -19,3 +19,7 @@ using Github action as CD tool
 4. [x] User can click the 'Decrypt' button disabled until the plain text has been encrypted.
 5. [x] User can click the 'Encrypt' button to encrypt the plain text message
 6. [x] User can see the encrypted message displayed in the result field.
+
+## Unit tests
+
+- Cypress powered
